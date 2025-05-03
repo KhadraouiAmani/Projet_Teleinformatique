@@ -1,20 +1,23 @@
 //côté Client et Serveur
-public class Operation {
+
+import java.io.Serializable;
+
+public class Operation implements Serializable {
     public String operation; // Code binaire (00, 01, 10, 11)
     public String operand1; // Binaire
     public String operand2; // Binaire
     public String result; // Binaire ou vide
-    //private String checksum;  // checksum pour vérifier
+    // private String checksum; // checksum pour vérifier
 
     public Operation(String operation, String operand1, String operand2, String result) {
         this.operation = operation;
         this.operand1 = operand1;
         this.operand2 = operand2;
-        this.result = "";  //initialisation
-        //this.checksum = checksum;
+        this.result = result; // initialisation
+        // this.checksum = checksum;
     }
 
-    //Getters et Setters
+    // Getters et Setters
     public String getOperation() {
         return operation;
     }
